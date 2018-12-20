@@ -1,5 +1,15 @@
 ---
-- hosts: localhost
-  remote_user: root
+- hosts: all
+
+  vars:
+    install_exim: true
+
+  pre_tasks:
+    - name: Ensure Package-Manager is up to date
+      package:
+        update_cache: yes
+        cache_valid_time: 3600
+      when: ansible_os_family == 'Debian'
+
   roles:
-    - ansible-role-route53
+    - role_under_test
