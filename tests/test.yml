@@ -2,7 +2,8 @@
 - hosts: all
 
   vars:
-    install_exim: true
+    aws_route53_record: something.example.org
+    aws_route53_zone: example.org
 
   pre_tasks:
     - name: Ensure Package-Manager is up to date

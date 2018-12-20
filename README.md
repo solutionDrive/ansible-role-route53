@@ -15,7 +15,7 @@ Role Variables
 
 Record which should be updated (no default value)
 
-    aws_route53_zone
+    aws_route53_zone: example.org
 
 Zone which should be used to perform the update (no default value)
 
