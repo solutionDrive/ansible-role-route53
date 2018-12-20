@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IP="{{ aws_ip|default('') }}"
+IP="{{ aws_route53_ip|default('') }}"
 
 if [ -z "$1" ]; then
     echo "IP not given...trying EC2 metadata...";

@@ -19,7 +19,7 @@ Record which should be updated (no default value)
 
 Zone which should be used to perform the update (no default value)
 
-    aws_ip: 127.0.0.1
+    aws_route53_ip: 127.0.0.1
 
 IP which should be set for the record (do default value)
 If no IP ist set, then this role uses metadata to discover an IP 
