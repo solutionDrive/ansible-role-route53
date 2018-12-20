@@ -6,17 +6,17 @@
   tags:
     - configuration
 
-  - name: Add update-route53 script
-    template:
-      src: updateRoute53.sh.j2
-      dest: "/tmp/updateRoute53.sh"
-      owner: root
-      group: root
-      mode: 0700
-    tags:
-      - configuration
+- name: Add update-route53 script
+  template:
+    src: updateRoute53.sh.j2
+    dest: "/tmp/updateRoute53.sh"
+    owner: root
+    group: root
+    mode: 0700
+  tags:
+    - configuration
 
-  - name: update drone-master.solutiondrive.internal route53 record
-    command: "/tmp/updateRoute53.sh"
-    tags:
-      - configuration
+- name: update drone-master.solutiondrive.internal route53 record
+  command: "/tmp/updateRoute53.sh"
+  tags:
+    - configuration
