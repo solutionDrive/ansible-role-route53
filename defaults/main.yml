@@ -1,2 +1,2 @@
 ---
-# defaults file for ansible-role-route53
+aws_route53_ttl: 3600
