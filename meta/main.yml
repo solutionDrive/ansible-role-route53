@@ -1,0 +1,27 @@
+galaxy_info:
+  role_name: route53
+  author: solutionDrive GmbH
+  description: Perform route53 action without ansible route53 module
+  company: solutionDrive GmbH
+
+  license: MIT
+
+  min_ansible_version: 2.0
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - xenial
+        - trusty
+    - name: Debian
+      versions:
+        - stretch
+        - jessie
+
+  galaxy_tags:
+    - aws
+    - route53
+    - configuration
+
+dependencies: []

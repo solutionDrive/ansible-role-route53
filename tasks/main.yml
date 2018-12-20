@@ -1,0 +1,22 @@
+---
+- name: Add update-route53 json
+  template:
+    src: update-route53-A.json.j2
+    dest: "/tmp/update-route53-A.json"
+  tags:
+    - configuration
+
+- name: Add update-route53 script
+  template:
+    src: updateRoute53.sh.j2
+    dest: "/tmp/updateRoute53.sh"
+    owner: root
+    group: root
+    mode: 0700
+  tags:
+    - configuration
+
+- name: update drone-master.solutiondrive.internal route53 record
+  command: "/tmp/updateRoute53.sh"
+  tags:
+    - configuration
