@@ -11,7 +11,23 @@ installed and working aws cli
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+    aws_route53_record: some_route.example.org
+
+Record which should be updated (no default value)
+
+    aws_route53_zone
+
+Zone which should be used to perform the update (no default value)
+
+    aws_ip: 127.0.0.1
+
+IP which should be set for the record (do default value)
+If no IP ist set, then this role uses metadata to discover an IP 
+
+    aws_route53_ttl: 3600
+
+TimeToLive for the record in seconds (default: 3600)
+
 
 Dependencies
 ------------

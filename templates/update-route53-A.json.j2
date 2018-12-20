@@ -1,0 +1,18 @@
+{
+  "Comment": "Update A record for {{ aws_route53_record }}",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "{{ aws_route53_record }}",
+        "Type": "A",
+        "TTL": {{ aws_route53_ttl }},
+        "ResourceRecords": [
+          {
+            "Value": "127.0.0.1"
+          }
+        ]
+      }
+    }
+  ]
+}
