@@ -2,7 +2,7 @@
 
 IP="{{ aws_route53_ip|default('') }}"
 
-if [ -z "$1" ]; then
+if [ -z "$IP" ]; then
     echo "IP not given...trying EC2 metadata...";
     IP=$( curl -s http://169.254.169.254/latest/meta-data/public-ipv4 )
 fi
