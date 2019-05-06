@@ -16,7 +16,7 @@
   tags:
     - configuration
 
-- name: update drone-master.solutiondrive.internal route53 record
+- name: "update {{ aws_route53_record }} route53 record"
   command: "/tmp/updateRoute53.sh"
   tags:
     - configuration
